@@ -1,0 +1,136 @@
+:root {
+    --color-primary: #71797E;
+    --background: #E5E4E2;
+    --background-a-hover: #D22E6D;
+    --background-mobile: #556284;
+    --background-desktop: #FFFFFF;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-neutral: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: var(--font-primary);
+
+}
+
+body {
+    width: 100%;
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+nav {
+    background-color: var(--background-mobile);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    margin: 0rem;
+    padding: 1.6rem;
+    color: var(--background-desktop);
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+}
+
+nav a {
+    color: var(--background-desktop);
+    font-weight: 400;
+    font-size: 1 rem;
+    text-transform: capitalize;
+
+    opacity: 1; 
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: var(--background-a-hover);
+    position: absolute;
+    bottom: -.2em;
+    left: 17px;
+    right: 0;
+}
+
+nav a:hover {
+    color: var(--background-a-hover);
+}
+
+.fa {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: .2rem;
+    font-size: 1.3rem;
+    
+}
+
+@media screen and (min-width: 48rem) {
+    .check-label {
+        display: none;
+    }
+
+    nav {
+        all: unset;
+        
+        background-color: var(--background-desktop);
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        color: var(--color-primary);
+        width: 85%;
+        margin: 5%;
+        padding: 1.6rem;
+        border-radius: .7rem;
+        box-shadow: .2rem .2rem .4rem .2rem  var(--background);
+    }
+
+    nav a {
+        text-decoration: unset;
+        color: var(--color-primary);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav li {
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+
+    #li-1 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+
+    nav {
+
+        text-align: end;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav li {
+        margin-left: 1.5rem;
+    }
+}
